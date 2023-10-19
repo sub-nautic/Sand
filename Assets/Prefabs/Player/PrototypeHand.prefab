@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7234671419399336447}
   - component: {fileID: 5205713416785362727}
   - component: {fileID: 5797289837706901404}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5979224380203426848}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PrototypeHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 655308926305468441}
   - component: {fileID: 5874129038887934588}
   - component: {fileID: 5626925113371528960}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PrototypeHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
