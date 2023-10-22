@@ -1,11 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
+using Playground.Input;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.XR;
-using UnityEngine.XR.Interaction.Toolkit.Inputs;
 
 namespace Playground.Player.Movement
 {
@@ -34,8 +31,6 @@ namespace Playground.Player.Movement
         [SerializeField] private float maxStepHeight = 0.4f;
         [Tooltip("Maximum step height above which you will fall instead of stepping")]
         [SerializeField] private float maxStepFallHeight = 1.0f;
-        [Tooltip("Distance above the ground that the player rig will still be considered grounded")]
-        [SerializeField] private float groundedDistance = 0.02f;
         [Tooltip("Maximum radius of holes you can step over without falling")]
         [SerializeField] private float maxStepOverRadius = 0.05f;
         [Tooltip("Maximum falling speed allowed")]
@@ -60,7 +55,6 @@ namespace Playground.Player.Movement
         [SerializeField, Min(1f)] private float slideMultiplier = 1.4f;
         [SerializeField] private LayerMask movementRaycastLayers = ~0;
 
-        private MainInputActions inputActions;
         private float turnDirection = 0f;
         private float turnPerformedTime = 0f;
         private float turnTargetAngle = 0f;
@@ -69,7 +63,6 @@ namespace Playground.Player.Movement
         private float targetHeightVelocity;
         private Vector3 currentYVelocity;
         private bool isFalling = false;
-        // private bool isGrounded;
         private Vector3 startPosition;
 
         private bool isInitialized;
@@ -78,11 +71,8 @@ namespace Playground.Player.Movement
 
         private void Awake()
         {
-            inputActions = new();
-            inputActions.Enable();
-
-            inputActions.RightHandLocomotion.Turn.performed += OnTurnPerformed;
-            inputActions.RightHandLocomotion.Turn.canceled += OnTurnCancelled;
+            InputProvider.MainInputActions.RightHandLocomotion.Turn.performed += OnTurnPerformed;
+            InputProvider.MainInputActions.RightHandLocomotion.Turn.canceled += OnTurnCancelled;
 
             startPosition = transform.position;
 
@@ -92,7 +82,6 @@ namespace Playground.Player.Movement
         private void OnTurnPerformed(InputAction.CallbackContext context)
         {
             TurnPlayerDirection(context.ReadValue<Vector2>().x);
-            Debug.Log($"[LocomotionController] OnTurnPerformed {context.ReadValue<Vector2>().x}");
         }
         private void OnTurnCancelled(InputAction.CallbackContext context)
         {
@@ -122,7 +111,7 @@ namespace Playground.Player.Movement
         private void UpdatePlayerMovement()
         {
             // Read input form controller
-            Vector3 inputDirection = inputActions.LeftHandLocomotion.Move.ReadValue<Vector2>();
+            Vector3 inputDirection = InputProvider.MainInputActions.LeftHandLocomotion.Move.ReadValue<Vector2>();
 
             // Calculate the amount of translation based on input and speed
             float movementAmount = inputDirection.magnitude * controllerMovementSpeed * Time.deltaTime;
@@ -217,9 +206,6 @@ namespace Playground.Player.Movement
                 // - If we are above the floor and falling (with a small margin when not falling), or
                 // - If we are inside the floor
                 isFalling = (floorLevel < 0f && isFalling) || floorLevel < -0.05f || floorLevel > maxStepFallHeight;
-
-                // Update grounded state
-                // isGrounded = floorLevel > -groundedDistance;
             }
             else
             {
@@ -267,8 +253,8 @@ namespace Playground.Player.Movement
 
         private void OnDestroy()
         {
-            inputActions.RightHandLocomotion.Turn.performed -= OnTurnPerformed;
-            inputActions.RightHandLocomotion.Turn.canceled -= OnTurnCancelled;
+            InputProvider.MainInputActions.RightHandLocomotion.Turn.performed -= OnTurnPerformed;
+            InputProvider.MainInputActions.RightHandLocomotion.Turn.canceled -= OnTurnCancelled;
         }
     }
 }

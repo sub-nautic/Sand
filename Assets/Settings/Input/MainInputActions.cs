@@ -351,12 +351,12 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Teleport Select"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""f48534c0-09a1-4ff4-8c83-d387294514d5"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": true
+                    ""initialStateCheck"": false
                 },
                 {
                     ""name"": ""Teleport Mode Activate"",
@@ -426,10 +426,10 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""c8f97703-3898-4094-b47e-da441629122d"",
-                    ""path"": ""<XRController>{RightHand}/{Primary2DAxis}"",
-                    ""interactions"": ""Sector(directions=-1,sweepBehavior=3)"",
+                    ""path"": ""<XRController>{RightHand}/{SecondaryButton}"",
+                    ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Generic XR Controller"",
+                    ""groups"": ""Generic XR Controller;Default"",
                     ""action"": ""Teleport Select"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false

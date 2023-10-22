@@ -4784,7 +4784,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1785556973}
   m_Layer: 0
-  m_Name: Escalator
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5525,6 +5525,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerXRRig
       objectReference: {fileID: 0}
+    - target: {fileID: 4396125660647969113, guid: f74eccc1ab39ef644a66f8ab7a58b2ba, type: 3}
+      propertyPath: m_StartingGroupMembers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396125660647969113, guid: f74eccc1ab39ef644a66f8ab7a58b2ba, type: 3}
+      propertyPath: m_StartingGroupMembers.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535822104213052972, guid: f74eccc1ab39ef644a66f8ab7a58b2ba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7145664773289389089, guid: f74eccc1ab39ef644a66f8ab7a58b2ba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786660454759089581, guid: f74eccc1ab39ef644a66f8ab7a58b2ba, type: 3}
+      propertyPath: m_ManipulationInteractionGroup
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7857205902677163164, guid: f74eccc1ab39ef644a66f8ab7a58b2ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5565,7 +5585,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8240200672928102976, guid: f74eccc1ab39ef644a66f8ab7a58b2ba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
