@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Playground.Player.Interaction
@@ -10,24 +8,24 @@ namespace Playground.Player.Interaction
         Transform Transform { get; set; }
         bool AllowRayInteraction { get; set; }
 
-        /// <summary>New interactor started hovering over this interactable</summary>
+        // Event triggered when a new interactor starts hovering over this interactable.
         event Action<IInteractor> HoverStartEvent;
-        /// <summary>Interactor stopped hovering over this interactable</summary>
+        // Event triggered when an interactor stops hovering over this interactable.
         event Action<IInteractor> HoverEndEvent;
 
-        /// <summary>Hand pressed interact button, while hovering/grabbing this interactable</summary>
+        // Event triggered when an interactor's hand presses this interactable.
         event Action<IInteractor> InteractionStartEvent;
-        /// <summary>Hand released interact button, while hovering/grabbing this interactable</summary>
+        // Event triggered when an interactor's hand releases the interact with this interactable.
         event Action<IInteractor> InteractionEndEvent;
 
-        /// <summary>Interactor started hovering over this interactable</summary>
+        // Called when a new interactor starts hovering over this interactable.
         void HoverStart(IInteractor interactor);
-        /// <summary>Interactor stopped hovering over this interactable</summary>
+        // Called when an interactor stops hovering over this interactable.
         void HoverEnd(IInteractor interactor);
 
-        /// <summary>Interactor pressed interact button, while hovering/grabbing this interactable</summary>
+        // Called when an interactor's hand presses this interactable.
         void InteractionStart(IInteractor interactor);
-        /// <summary>Interactor released interact button, while hovering/grabbing this interactable</summary>
+        // Called when an interactor's hand releases this interactable.
         void InteractionEnd(IInteractor interactor);
     }
 }

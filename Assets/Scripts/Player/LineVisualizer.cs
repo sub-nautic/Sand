@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Playground.Player.Interaction;
 using UnityEngine;
 
@@ -8,13 +5,14 @@ namespace Playground.Player
 {
     public class LineVisualizer : MonoBehaviour
     {
+        [Tooltip("The interaction controller responsible for raycasting")]
         [SerializeField] private InteractionController controllerInteractor;
+        [Tooltip("The Line Renderer component used for visualization")]
         [SerializeField] private LineRenderer lineRenderer;
-        [SerializeField] private Transform pointerTransform;
 
         private bool pointerEnabled;
 
-        private const float MAX_LENGTH = 25f;
+        private const float MAX_LENGTH = 6f;
         private const float RAY_OFFSET = 0.05f;
         private const int STEPS = 3;
 
@@ -24,24 +22,30 @@ namespace Playground.Player
             {
                 return;
             }
-            pointerEnabled = controllerInteractor.RaycastInteractor.IsHovering && !controllerInteractor.RaycastInteractor.IsInteracting; // Debug.Log($"[LineVisualizer] Update IsHovering: {controllerInteractor.RaycastInteractor.IsHovering}, IsInteracting: {!controllerInteractor.RaycastInteractor.IsInteracting}");
 
-            SetPointerEnabled(pointerEnabled);
+            // Check if the pointer is enabled
+            pointerEnabled = controllerInteractor.RaycastInteractor.IsHovering && !controllerInteractor.RaycastInteractor.IsInteracting;
+
+            SetLineEnabled(pointerEnabled);
             if (!pointerEnabled)
             {
                 return;
             }
 
+            // Get the currently hovered interaction data
             InteractableData hoverInteraction = controllerInteractor.RaycastInteractor.CurrentHoverInteractableData;
+
+            // Update the line renderer based on the hover interaction
             UpdateLineRenderer(hoverInteraction);
-            UpdatePointer(hoverInteraction);
         }
 
         private void UpdateLineRenderer(InteractableData hoverInteraction)
         {
+            // The starting point of the line and ray direction.
             Vector3 origin = controllerInteractor.RaycastInteractorPosition;
             Vector3 direction = controllerInteractor.RaycastInteractorDirection * Mathf.Min(hoverInteraction.Distance, MAX_LENGTH);
 
+            // Calculate the end point of the line
             Vector3 end = origin + (direction - direction * RAY_OFFSET);
 
             for (int step = 0; step < STEPS; step++)
@@ -53,15 +57,10 @@ namespace Playground.Player
             }
         }
 
-        private void UpdatePointer(InteractableData hoverInteraction)
+        private void SetLineEnabled(bool pointerEnabled)
         {
-            pointerTransform.position = hoverInteraction.HitPosition;
-        }
-
-        private void SetPointerEnabled(bool pointerEnabled)
-        {
+            // Enable or disable the line renderer based on the pointer's status
             lineRenderer.enabled = pointerEnabled;
-            pointerTransform.position = enabled ? pointerTransform.position : new Vector3(0, -999f, 0);
         }
     }
 }

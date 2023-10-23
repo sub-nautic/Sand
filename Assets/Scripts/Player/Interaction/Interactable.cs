@@ -1,12 +1,11 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Playground.Player.Interaction
 {
     public class Interactable : MonoBehaviour, IInteractable
     {
+        [Tooltip("Determines if ray interaction is allowed for this object")]
         [SerializeField] private bool allowRayInteraction = true;
 
         public Transform Transform { get; set; }

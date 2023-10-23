@@ -722,7 +722,7 @@ MonoBehaviour:
   raycastLayerMask:
     serializedVersion: 2
     m_Bits: 1
-  maxRaycastDistance: 25
+  maxRaycastDistance: 6
 --- !u!1 &8711763504242423671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,7 +1001,7 @@ MonoBehaviour:
   raycastLayerMask:
     serializedVersion: 2
     m_Bits: 1
-  maxRaycastDistance: 25
+  maxRaycastDistance: 6
 --- !u!1001 &1557909315852643046
 PrefabInstance:
   m_ObjectHideFlags: 0
