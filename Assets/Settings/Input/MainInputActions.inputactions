@@ -496,7 +496,7 @@
             "id": "5bae8a17-794a-44f6-aa3a-1c85548f7a81",
             "actions": [
                 {
-                    "name": "Select",
+                    "name": "Grab",
                     "type": "Button",
                     "id": "17106b64-96f1-446e-96f1-3102bd1aa8fc",
                     "expectedControlType": "Button",
@@ -505,7 +505,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Select Value",
+                    "name": "Grab Value",
                     "type": "Value",
                     "id": "13c75640-1282-43b5-9ad7-cc5cdb028148",
                     "expectedControlType": "Axis",
@@ -514,7 +514,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Activate",
+                    "name": "Interact",
                     "type": "Button",
                     "id": "ab9625cd-03a6-45a3-a2d6-30c73d33ed2f",
                     "expectedControlType": "Button",
@@ -523,7 +523,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Activate Value",
+                    "name": "Interact Value",
                     "type": "Value",
                     "id": "8322885a-3778-4f50-8194-b7a3c690dcde",
                     "expectedControlType": "Axis",
@@ -603,7 +603,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
-                    "action": "Select",
+                    "action": "Grab",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -614,7 +614,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
-                    "action": "Select",
+                    "action": "Grab",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -625,7 +625,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
-                    "action": "Select Value",
+                    "action": "Grab Value",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -636,7 +636,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
-                    "action": "Select Value",
+                    "action": "Grab Value",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -647,7 +647,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
-                    "action": "Activate",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -658,7 +658,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
-                    "action": "Activate Value",
+                    "action": "Interact Value",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1292,7 +1292,7 @@
             "id": "b51ef90b-9d93-46e6-a3cd-fc0a7b159457",
             "actions": [
                 {
-                    "name": "Select",
+                    "name": "Grab",
                     "type": "Button",
                     "id": "5724925f-a2a4-471d-9046-6a3cc0989cde",
                     "expectedControlType": "Button",
@@ -1301,7 +1301,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Select Value",
+                    "name": "Grab Value",
                     "type": "Value",
                     "id": "3bff102c-232d-43e0-933f-9b0581117456",
                     "expectedControlType": "Axis",
@@ -1310,7 +1310,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Activate",
+                    "name": "Interact",
                     "type": "Button",
                     "id": "8ba7a4be-d914-4aba-903e-b8eb86b75890",
                     "expectedControlType": "Button",
@@ -1319,7 +1319,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Activate Value",
+                    "name": "Interact Value",
                     "type": "Value",
                     "id": "84e24959-e7a0-46ff-83a1-a8cb772e71f0",
                     "expectedControlType": "Axis",
@@ -1399,7 +1399,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
-                    "action": "Select",
+                    "action": "Grab",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1410,7 +1410,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
-                    "action": "Select",
+                    "action": "Grab",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1421,7 +1421,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
-                    "action": "Select Value",
+                    "action": "Grab Value",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1432,7 +1432,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
-                    "action": "Select Value",
+                    "action": "Grab Value",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1443,7 +1443,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
-                    "action": "Activate",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1454,7 +1454,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
-                    "action": "Activate Value",
+                    "action": "Interact Value",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
