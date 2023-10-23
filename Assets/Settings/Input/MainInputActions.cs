@@ -518,7 +518,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
             ""id"": ""5bae8a17-794a-44f6-aa3a-1c85548f7a81"",
             ""actions"": [
                 {
-                    ""name"": ""Select"",
+                    ""name"": ""Grab"",
                     ""type"": ""Button"",
                     ""id"": ""17106b64-96f1-446e-96f1-3102bd1aa8fc"",
                     ""expectedControlType"": ""Button"",
@@ -527,7 +527,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Select Value"",
+                    ""name"": ""Grab Value"",
                     ""type"": ""Value"",
                     ""id"": ""13c75640-1282-43b5-9ad7-cc5cdb028148"",
                     ""expectedControlType"": ""Axis"",
@@ -536,7 +536,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Activate"",
+                    ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""ab9625cd-03a6-45a3-a2d6-30c73d33ed2f"",
                     ""expectedControlType"": ""Button"",
@@ -545,7 +545,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Activate Value"",
+                    ""name"": ""Interact Value"",
                     ""type"": ""Value"",
                     ""id"": ""8322885a-3778-4f50-8194-b7a3c690dcde"",
                     ""expectedControlType"": ""Axis"",
@@ -625,7 +625,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Generic XR Controller"",
-                    ""action"": ""Select"",
+                    ""action"": ""Grab"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -636,7 +636,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Generic XR Controller"",
-                    ""action"": ""Select"",
+                    ""action"": ""Grab"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -647,7 +647,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Generic XR Controller"",
-                    ""action"": ""Select Value"",
+                    ""action"": ""Grab Value"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -658,7 +658,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Generic XR Controller"",
-                    ""action"": ""Select Value"",
+                    ""action"": ""Grab Value"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -669,7 +669,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Generic XR Controller"",
-                    ""action"": ""Activate"",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -680,7 +680,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Generic XR Controller"",
-                    ""action"": ""Activate Value"",
+                    ""action"": ""Interact Value"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1314,7 +1314,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
             ""id"": ""b51ef90b-9d93-46e6-a3cd-fc0a7b159457"",
             ""actions"": [
                 {
-                    ""name"": ""Select"",
+                    ""name"": ""Grab"",
                     ""type"": ""Button"",
                     ""id"": ""5724925f-a2a4-471d-9046-6a3cc0989cde"",
                     ""expectedControlType"": ""Button"",
@@ -1323,7 +1323,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Select Value"",
+                    ""name"": ""Grab Value"",
                     ""type"": ""Value"",
                     ""id"": ""3bff102c-232d-43e0-933f-9b0581117456"",
                     ""expectedControlType"": ""Axis"",
@@ -1332,7 +1332,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Activate"",
+                    ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""8ba7a4be-d914-4aba-903e-b8eb86b75890"",
                     ""expectedControlType"": ""Button"",
@@ -1341,7 +1341,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Activate Value"",
+                    ""name"": ""Interact Value"",
                     ""type"": ""Value"",
                     ""id"": ""84e24959-e7a0-46ff-83a1-a8cb772e71f0"",
                     ""expectedControlType"": ""Axis"",
@@ -1421,7 +1421,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Generic XR Controller"",
-                    ""action"": ""Select"",
+                    ""action"": ""Grab"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1432,7 +1432,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Generic XR Controller"",
-                    ""action"": ""Select"",
+                    ""action"": ""Grab"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1443,7 +1443,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Generic XR Controller"",
-                    ""action"": ""Select Value"",
+                    ""action"": ""Grab Value"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1454,7 +1454,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Generic XR Controller"",
-                    ""action"": ""Select Value"",
+                    ""action"": ""Grab Value"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1465,7 +1465,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Generic XR Controller"",
-                    ""action"": ""Activate"",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1476,7 +1476,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Generic XR Controller"",
-                    ""action"": ""Activate Value"",
+                    ""action"": ""Interact Value"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -2433,10 +2433,10 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
         m_RightHandLocomotion_SnapTurn = m_RightHandLocomotion.FindAction("Snap Turn", throwIfNotFound: true);
         // RightHandInteraction
         m_RightHandInteraction = asset.FindActionMap("RightHandInteraction", throwIfNotFound: true);
-        m_RightHandInteraction_Select = m_RightHandInteraction.FindAction("Select", throwIfNotFound: true);
-        m_RightHandInteraction_SelectValue = m_RightHandInteraction.FindAction("Select Value", throwIfNotFound: true);
-        m_RightHandInteraction_Activate = m_RightHandInteraction.FindAction("Activate", throwIfNotFound: true);
-        m_RightHandInteraction_ActivateValue = m_RightHandInteraction.FindAction("Activate Value", throwIfNotFound: true);
+        m_RightHandInteraction_Grab = m_RightHandInteraction.FindAction("Grab", throwIfNotFound: true);
+        m_RightHandInteraction_GrabValue = m_RightHandInteraction.FindAction("Grab Value", throwIfNotFound: true);
+        m_RightHandInteraction_Interact = m_RightHandInteraction.FindAction("Interact", throwIfNotFound: true);
+        m_RightHandInteraction_InteractValue = m_RightHandInteraction.FindAction("Interact Value", throwIfNotFound: true);
         m_RightHandInteraction_UIPress = m_RightHandInteraction.FindAction("UI Press", throwIfNotFound: true);
         m_RightHandInteraction_UIPressValue = m_RightHandInteraction.FindAction("UI Press Value", throwIfNotFound: true);
         m_RightHandInteraction_UIScroll = m_RightHandInteraction.FindAction("UI Scroll", throwIfNotFound: true);
@@ -2471,10 +2471,10 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
         m_LeftHandLocomotion_SnapTurn = m_LeftHandLocomotion.FindAction("Snap Turn", throwIfNotFound: true);
         // LeftHandInteraction
         m_LeftHandInteraction = asset.FindActionMap("LeftHandInteraction", throwIfNotFound: true);
-        m_LeftHandInteraction_Select = m_LeftHandInteraction.FindAction("Select", throwIfNotFound: true);
-        m_LeftHandInteraction_SelectValue = m_LeftHandInteraction.FindAction("Select Value", throwIfNotFound: true);
-        m_LeftHandInteraction_Activate = m_LeftHandInteraction.FindAction("Activate", throwIfNotFound: true);
-        m_LeftHandInteraction_ActivateValue = m_LeftHandInteraction.FindAction("Activate Value", throwIfNotFound: true);
+        m_LeftHandInteraction_Grab = m_LeftHandInteraction.FindAction("Grab", throwIfNotFound: true);
+        m_LeftHandInteraction_GrabValue = m_LeftHandInteraction.FindAction("Grab Value", throwIfNotFound: true);
+        m_LeftHandInteraction_Interact = m_LeftHandInteraction.FindAction("Interact", throwIfNotFound: true);
+        m_LeftHandInteraction_InteractValue = m_LeftHandInteraction.FindAction("Interact Value", throwIfNotFound: true);
         m_LeftHandInteraction_UIPress = m_LeftHandInteraction.FindAction("UI Press", throwIfNotFound: true);
         m_LeftHandInteraction_UIPressValue = m_LeftHandInteraction.FindAction("UI Press Value", throwIfNotFound: true);
         m_LeftHandInteraction_UIScroll = m_LeftHandInteraction.FindAction("UI Scroll", throwIfNotFound: true);
@@ -2772,10 +2772,10 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
     // RightHandInteraction
     private readonly InputActionMap m_RightHandInteraction;
     private List<IRightHandInteractionActions> m_RightHandInteractionActionsCallbackInterfaces = new List<IRightHandInteractionActions>();
-    private readonly InputAction m_RightHandInteraction_Select;
-    private readonly InputAction m_RightHandInteraction_SelectValue;
-    private readonly InputAction m_RightHandInteraction_Activate;
-    private readonly InputAction m_RightHandInteraction_ActivateValue;
+    private readonly InputAction m_RightHandInteraction_Grab;
+    private readonly InputAction m_RightHandInteraction_GrabValue;
+    private readonly InputAction m_RightHandInteraction_Interact;
+    private readonly InputAction m_RightHandInteraction_InteractValue;
     private readonly InputAction m_RightHandInteraction_UIPress;
     private readonly InputAction m_RightHandInteraction_UIPressValue;
     private readonly InputAction m_RightHandInteraction_UIScroll;
@@ -2787,10 +2787,10 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
     {
         private @MainInputActions m_Wrapper;
         public RightHandInteractionActions(@MainInputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Select => m_Wrapper.m_RightHandInteraction_Select;
-        public InputAction @SelectValue => m_Wrapper.m_RightHandInteraction_SelectValue;
-        public InputAction @Activate => m_Wrapper.m_RightHandInteraction_Activate;
-        public InputAction @ActivateValue => m_Wrapper.m_RightHandInteraction_ActivateValue;
+        public InputAction @Grab => m_Wrapper.m_RightHandInteraction_Grab;
+        public InputAction @GrabValue => m_Wrapper.m_RightHandInteraction_GrabValue;
+        public InputAction @Interact => m_Wrapper.m_RightHandInteraction_Interact;
+        public InputAction @InteractValue => m_Wrapper.m_RightHandInteraction_InteractValue;
         public InputAction @UIPress => m_Wrapper.m_RightHandInteraction_UIPress;
         public InputAction @UIPressValue => m_Wrapper.m_RightHandInteraction_UIPressValue;
         public InputAction @UIScroll => m_Wrapper.m_RightHandInteraction_UIScroll;
@@ -2807,18 +2807,18 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_RightHandInteractionActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_RightHandInteractionActionsCallbackInterfaces.Add(instance);
-            @Select.started += instance.OnSelect;
-            @Select.performed += instance.OnSelect;
-            @Select.canceled += instance.OnSelect;
-            @SelectValue.started += instance.OnSelectValue;
-            @SelectValue.performed += instance.OnSelectValue;
-            @SelectValue.canceled += instance.OnSelectValue;
-            @Activate.started += instance.OnActivate;
-            @Activate.performed += instance.OnActivate;
-            @Activate.canceled += instance.OnActivate;
-            @ActivateValue.started += instance.OnActivateValue;
-            @ActivateValue.performed += instance.OnActivateValue;
-            @ActivateValue.canceled += instance.OnActivateValue;
+            @Grab.started += instance.OnGrab;
+            @Grab.performed += instance.OnGrab;
+            @Grab.canceled += instance.OnGrab;
+            @GrabValue.started += instance.OnGrabValue;
+            @GrabValue.performed += instance.OnGrabValue;
+            @GrabValue.canceled += instance.OnGrabValue;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
+            @InteractValue.started += instance.OnInteractValue;
+            @InteractValue.performed += instance.OnInteractValue;
+            @InteractValue.canceled += instance.OnInteractValue;
             @UIPress.started += instance.OnUIPress;
             @UIPress.performed += instance.OnUIPress;
             @UIPress.canceled += instance.OnUIPress;
@@ -2844,18 +2844,18 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(IRightHandInteractionActions instance)
         {
-            @Select.started -= instance.OnSelect;
-            @Select.performed -= instance.OnSelect;
-            @Select.canceled -= instance.OnSelect;
-            @SelectValue.started -= instance.OnSelectValue;
-            @SelectValue.performed -= instance.OnSelectValue;
-            @SelectValue.canceled -= instance.OnSelectValue;
-            @Activate.started -= instance.OnActivate;
-            @Activate.performed -= instance.OnActivate;
-            @Activate.canceled -= instance.OnActivate;
-            @ActivateValue.started -= instance.OnActivateValue;
-            @ActivateValue.performed -= instance.OnActivateValue;
-            @ActivateValue.canceled -= instance.OnActivateValue;
+            @Grab.started -= instance.OnGrab;
+            @Grab.performed -= instance.OnGrab;
+            @Grab.canceled -= instance.OnGrab;
+            @GrabValue.started -= instance.OnGrabValue;
+            @GrabValue.performed -= instance.OnGrabValue;
+            @GrabValue.canceled -= instance.OnGrabValue;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
+            @InteractValue.started -= instance.OnInteractValue;
+            @InteractValue.performed -= instance.OnInteractValue;
+            @InteractValue.canceled -= instance.OnInteractValue;
             @UIPress.started -= instance.OnUIPress;
             @UIPress.performed -= instance.OnUIPress;
             @UIPress.canceled -= instance.OnUIPress;
@@ -3142,10 +3142,10 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
     // LeftHandInteraction
     private readonly InputActionMap m_LeftHandInteraction;
     private List<ILeftHandInteractionActions> m_LeftHandInteractionActionsCallbackInterfaces = new List<ILeftHandInteractionActions>();
-    private readonly InputAction m_LeftHandInteraction_Select;
-    private readonly InputAction m_LeftHandInteraction_SelectValue;
-    private readonly InputAction m_LeftHandInteraction_Activate;
-    private readonly InputAction m_LeftHandInteraction_ActivateValue;
+    private readonly InputAction m_LeftHandInteraction_Grab;
+    private readonly InputAction m_LeftHandInteraction_GrabValue;
+    private readonly InputAction m_LeftHandInteraction_Interact;
+    private readonly InputAction m_LeftHandInteraction_InteractValue;
     private readonly InputAction m_LeftHandInteraction_UIPress;
     private readonly InputAction m_LeftHandInteraction_UIPressValue;
     private readonly InputAction m_LeftHandInteraction_UIScroll;
@@ -3157,10 +3157,10 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
     {
         private @MainInputActions m_Wrapper;
         public LeftHandInteractionActions(@MainInputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Select => m_Wrapper.m_LeftHandInteraction_Select;
-        public InputAction @SelectValue => m_Wrapper.m_LeftHandInteraction_SelectValue;
-        public InputAction @Activate => m_Wrapper.m_LeftHandInteraction_Activate;
-        public InputAction @ActivateValue => m_Wrapper.m_LeftHandInteraction_ActivateValue;
+        public InputAction @Grab => m_Wrapper.m_LeftHandInteraction_Grab;
+        public InputAction @GrabValue => m_Wrapper.m_LeftHandInteraction_GrabValue;
+        public InputAction @Interact => m_Wrapper.m_LeftHandInteraction_Interact;
+        public InputAction @InteractValue => m_Wrapper.m_LeftHandInteraction_InteractValue;
         public InputAction @UIPress => m_Wrapper.m_LeftHandInteraction_UIPress;
         public InputAction @UIPressValue => m_Wrapper.m_LeftHandInteraction_UIPressValue;
         public InputAction @UIScroll => m_Wrapper.m_LeftHandInteraction_UIScroll;
@@ -3177,18 +3177,18 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_LeftHandInteractionActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_LeftHandInteractionActionsCallbackInterfaces.Add(instance);
-            @Select.started += instance.OnSelect;
-            @Select.performed += instance.OnSelect;
-            @Select.canceled += instance.OnSelect;
-            @SelectValue.started += instance.OnSelectValue;
-            @SelectValue.performed += instance.OnSelectValue;
-            @SelectValue.canceled += instance.OnSelectValue;
-            @Activate.started += instance.OnActivate;
-            @Activate.performed += instance.OnActivate;
-            @Activate.canceled += instance.OnActivate;
-            @ActivateValue.started += instance.OnActivateValue;
-            @ActivateValue.performed += instance.OnActivateValue;
-            @ActivateValue.canceled += instance.OnActivateValue;
+            @Grab.started += instance.OnGrab;
+            @Grab.performed += instance.OnGrab;
+            @Grab.canceled += instance.OnGrab;
+            @GrabValue.started += instance.OnGrabValue;
+            @GrabValue.performed += instance.OnGrabValue;
+            @GrabValue.canceled += instance.OnGrabValue;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
+            @InteractValue.started += instance.OnInteractValue;
+            @InteractValue.performed += instance.OnInteractValue;
+            @InteractValue.canceled += instance.OnInteractValue;
             @UIPress.started += instance.OnUIPress;
             @UIPress.performed += instance.OnUIPress;
             @UIPress.canceled += instance.OnUIPress;
@@ -3214,18 +3214,18 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(ILeftHandInteractionActions instance)
         {
-            @Select.started -= instance.OnSelect;
-            @Select.performed -= instance.OnSelect;
-            @Select.canceled -= instance.OnSelect;
-            @SelectValue.started -= instance.OnSelectValue;
-            @SelectValue.performed -= instance.OnSelectValue;
-            @SelectValue.canceled -= instance.OnSelectValue;
-            @Activate.started -= instance.OnActivate;
-            @Activate.performed -= instance.OnActivate;
-            @Activate.canceled -= instance.OnActivate;
-            @ActivateValue.started -= instance.OnActivateValue;
-            @ActivateValue.performed -= instance.OnActivateValue;
-            @ActivateValue.canceled -= instance.OnActivateValue;
+            @Grab.started -= instance.OnGrab;
+            @Grab.performed -= instance.OnGrab;
+            @Grab.canceled -= instance.OnGrab;
+            @GrabValue.started -= instance.OnGrabValue;
+            @GrabValue.performed -= instance.OnGrabValue;
+            @GrabValue.canceled -= instance.OnGrabValue;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
+            @InteractValue.started -= instance.OnInteractValue;
+            @InteractValue.performed -= instance.OnInteractValue;
+            @InteractValue.canceled -= instance.OnInteractValue;
             @UIPress.started -= instance.OnUIPress;
             @UIPress.performed -= instance.OnUIPress;
             @UIPress.canceled -= instance.OnUIPress;
@@ -3541,10 +3541,10 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
     }
     public interface IRightHandInteractionActions
     {
-        void OnSelect(InputAction.CallbackContext context);
-        void OnSelectValue(InputAction.CallbackContext context);
-        void OnActivate(InputAction.CallbackContext context);
-        void OnActivateValue(InputAction.CallbackContext context);
+        void OnGrab(InputAction.CallbackContext context);
+        void OnGrabValue(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
+        void OnInteractValue(InputAction.CallbackContext context);
         void OnUIPress(InputAction.CallbackContext context);
         void OnUIPressValue(InputAction.CallbackContext context);
         void OnUIScroll(InputAction.CallbackContext context);
@@ -3582,10 +3582,10 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
     }
     public interface ILeftHandInteractionActions
     {
-        void OnSelect(InputAction.CallbackContext context);
-        void OnSelectValue(InputAction.CallbackContext context);
-        void OnActivate(InputAction.CallbackContext context);
-        void OnActivateValue(InputAction.CallbackContext context);
+        void OnGrab(InputAction.CallbackContext context);
+        void OnGrabValue(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
+        void OnInteractValue(InputAction.CallbackContext context);
         void OnUIPress(InputAction.CallbackContext context);
         void OnUIPressValue(InputAction.CallbackContext context);
         void OnUIScroll(InputAction.CallbackContext context);
