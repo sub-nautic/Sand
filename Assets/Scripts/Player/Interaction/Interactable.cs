@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Playground.Player.Interaction
 {
-    public class Interactable : IInteractable
+    public class Interactable : MonoBehaviour, IInteractable
     {
         [SerializeField] private bool allowRayInteraction = true;
 

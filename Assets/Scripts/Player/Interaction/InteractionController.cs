@@ -11,11 +11,17 @@ namespace Playground.Player.Interaction
     {
         [SerializeField] private HandSide handSide;
         [SerializeField] private Transform raycastInteractPoint;
-        [SerializeField] private RaycastInteractor raycastInteractor;
         [SerializeField] private LayerMask raycastLayerMask;
         [SerializeField] private float maxRaycastDistance = 25f;
 
+        public RaycastInteractor RaycastInteractor => raycastInteractor;
+        public Vector3 RaycastInteractorPosition => raycastInteractPoint.position;
+        public Vector3 RaycastInteractorDirection => raycastInteractPoint.transform.forward;
+        public bool Initialized => initialized;
+
         private bool initialized;
+        private RaycastInteractor raycastInteractor;
+
         private void Start()
         {
             if (handSide == HandSide.Right)

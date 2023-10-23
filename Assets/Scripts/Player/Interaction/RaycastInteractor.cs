@@ -12,9 +12,15 @@ namespace Playground.Player.Interaction
         public Transform Transform { get; private set; }
         public HandSide HandSide => HandSide;
         public float InteractionAmount { get; private set; }
+        public bool IsHovering => currentHoverInteractableData != null;
+        public bool IsInteracting => currentInteractableData != null;
+        public InteractableData CurrentHoverInteractableData => currentHoverInteractableData;
+        // public Interactable CurrentInteractable { get; private set; }
+        // public InteractableData CurrentHoverInteractableData { get; private set; }
 
         private HandSide handSide;
-        private Interactable currentInteractable;
+        private InteractableData currentHoverInteractableData;
+        private InteractableData currentInteractableData;
 
         private readonly LayerMask layerMask;
         private readonly float maxRayDistance;
@@ -43,39 +49,40 @@ namespace Playground.Player.Interaction
 
         private void UpdateRaycastHover()
         {
-            //show line renderer if can do something
-            currentInteractable = RaycastInteractable();
+            InteractableData interactableData = RaycastInteractable();
 
-            if (currentInteractable != null)
-            {
-                currentInteractable.HoverStart(this);
-            }
-            else
-            {
-                currentInteractable.HoverEnd(this);
-            }
+            currentHoverInteractableData?.Interactable.HoverEnd(this);
+            currentHoverInteractableData = interactableData;
+            currentHoverInteractableData?.Interactable.HoverStart(this);
         }
 
         public void StartRaycastInteraction()
         {
-            if (currentInteractable != null)
-            {
-                currentInteractable.InteractionStart(this);
-            }
+            // if (currentHoverInteractableData != null)
+            // {
+            //     currentHoverInteractableData.Interactable.InteractionStart(this);
+            //     IsInteracting = true;
+            // }
+
+            currentInteractableData?.Interactable.InteractionEnd(this);
+            currentInteractableData = RaycastInteractable();
+            currentInteractableData?.Interactable.InteractionStart(this);
         }
 
         public void EndRaycastInteraction()
         {
-            currentInteractable.InteractionEnd(this);
+            currentInteractableData?.Interactable.InteractionEnd(this);
+            currentInteractableData = null;
         }
 
-        private Interactable RaycastInteractable()
+        private InteractableData RaycastInteractable()
         {
             if (Physics.Raycast(Transform.position, Transform.forward, out RaycastHit hit, maxRayDistance, layerMask, QueryTriggerInteraction.Ignore))
             {
                 IInteractable interactable = hit.transform.GetComponentInParent<Interactable>();
-                // float distance = Vector3.Distance(Transform.position, hit.point);
-                return interactable?.AllowRayInteraction == true ? interactable as Interactable : null;
+                float hitDistance = Vector3.Distance(Transform.position, hit.point);
+                // Debug.Log($"[RaycastInteractor] hit: {hit.collider.name}");
+                return interactable?.AllowRayInteraction == true ? new InteractableData(interactable, hitDistance, hit.point) : null;
             }
 
             return null;
