@@ -7,6 +7,8 @@ namespace Playground.Player.Interaction
     public class RaycastInteractor : IInteractor
     {
         public Transform Transform { get; private set; }
+        public Vector3 HitPosition => currentInteractableData.HitPosition;
+        public Vector3 HoverHitPosition => currentHoverInteractableData.HitPosition;
         public HandSide HandSide => HandSide;
         public float InteractionAmount { get; private set; }
         public bool IsHovering => currentHoverInteractableData != null;

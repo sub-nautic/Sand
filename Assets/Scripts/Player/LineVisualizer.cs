@@ -24,7 +24,7 @@ namespace Playground.Player
             }
 
             // Check if the pointer is enabled
-            pointerEnabled = controllerInteractor.RaycastInteractor.IsHovering && !controllerInteractor.RaycastInteractor.IsInteracting;
+            pointerEnabled = controllerInteractor.RaycastInteractor.IsHovering; // && !controllerInteractor.RaycastInteractor.IsInteracting;
 
             SetLineEnabled(pointerEnabled);
             if (!pointerEnabled)
