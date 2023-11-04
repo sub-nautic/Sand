@@ -1,7 +1,7 @@
-using Playground.Player.Interaction;
+using OverlordVR.Player.Interaction;
 using UnityEngine;
 
-namespace Playground.Player
+namespace OverlordVR.Player
 {
     public class LineVisualizer : MonoBehaviour
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Playground.Player.Interaction
+namespace OverlordVR.Player.Interaction
 {
     public class InteractableData
     {

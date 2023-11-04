@@ -1,4 +1,4 @@
-namespace Playground.Player.Interaction
+namespace OverlordVR.Player.Interaction
 {
     public enum HandSide
     {

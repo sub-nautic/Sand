@@ -1,8 +1,8 @@
-using Playground.Input;
+using OverlordVR.Input;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Playground.Player.Interaction
+namespace OverlordVR.Player.Interaction
 {
     public class InteractionController : MonoBehaviour
     {
