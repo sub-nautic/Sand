@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameCharacter : MonoBehaviour
@@ -9,6 +7,8 @@ public class GameCharacter : MonoBehaviour
 
     public Action<Vector3> MovementInteractionEvent;
 
+    private const float DEFAULT_SPEED = 1f;
+
     private void Awake()
     {
         MovementInteractionEvent += OnInteractionEvent;
@@ -16,7 +16,6 @@ public class GameCharacter : MonoBehaviour
 
     private void OnInteractionEvent(Vector3 position)
     {
-        // Debug.Log($"[GameCharacter] Position to move: {position}");
-        unitMovementController.StartMoveAction(position, 1);
+        unitMovementController.StartMoveAction(position, DEFAULT_SPEED);
     }
 }

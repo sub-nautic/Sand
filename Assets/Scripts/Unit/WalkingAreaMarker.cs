@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Playground.Player.Interaction;
-using UnityEngine;
 
 public class WalkingAreaMarker : Interactable
 {
@@ -28,7 +24,6 @@ public class WalkingAreaMarker : Interactable
 
     private void OnInteractionStartEvent(IInteractor interactor)
     {
-        // Debug.Log($"[WalkingAreaMarker] {interactor.HitPosition}");
         game.GameCharacter.MovementInteractionEvent?.Invoke(interactor.HitPosition);
     }
 }

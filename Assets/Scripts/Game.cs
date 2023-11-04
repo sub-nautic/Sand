@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,9 +17,10 @@ public class Game : MonoBehaviour, IGame
 
     private void Start()
     {
-        // to refactor
+        // To refactor
         SetGameCharacter();
     }
+
     public void StartGame()
     {
 
