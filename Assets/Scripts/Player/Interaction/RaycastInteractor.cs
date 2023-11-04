@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Playground.Player.Interaction
+namespace OverlordVR.Player.Interaction
 {
     public class RaycastInteractor : IInteractor
     {

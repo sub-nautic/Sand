@@ -1,4 +1,4 @@
-namespace Playground.Input
+namespace OverlordVR.Input
 {
     public class InputProvider
     {

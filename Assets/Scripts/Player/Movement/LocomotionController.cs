@@ -1,10 +1,10 @@
 using System;
-using Playground.Input;
+using OverlordVR.Input;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Playground.Player.Movement
+namespace OverlordVR.Player.Movement
 {
     public class LocomotionController : MonoBehaviour
     {

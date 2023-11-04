@@ -1,4 +1,4 @@
-using Playground.Player.Interaction;
+using OverlordVR.Player.Interaction;
 
 public class WalkingAreaMarker : Interactable
 {
