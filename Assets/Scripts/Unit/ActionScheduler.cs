@@ -1,28 +1,31 @@
-public class ActionScheduler
+namespace OverlordVR.Unit
 {
-    private IAction currentAction;
-
-    public void StartAction(IAction action)
+    public class ActionScheduler
     {
-        if (currentAction == action)
+        private IAction currentAction;
+
+        public void StartAction(IAction action)
         {
-            // If the provided action is the same as the current action, do nothing
-            return;
+            if (currentAction == action)
+            {
+                // If the provided action is the same as the current action, do nothing
+                return;
+            }
+
+            if (currentAction != null)
+            {
+                // If there is a current action, cancel it
+                currentAction.Cancel();
+            }
+
+            // Set the provided action as the new current action
+            currentAction = action;
         }
 
-        if (currentAction != null)
+        public void CancelCurrentAction()
         {
-            // If there is a current action, cancel it
-            currentAction.Cancel();
+            // Cancel the current action by setting it to null
+            StartAction(null);
         }
-
-        // Set the provided action as the new current action
-        currentAction = action;
-    }
-
-    public void CancelCurrentAction()
-    {
-        // Cancel the current action by setting it to null
-        StartAction(null);
     }
 }

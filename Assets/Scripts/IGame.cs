@@ -1,11 +1,14 @@
 using System;
 using System.Collections.Generic;
 
-public interface IGame
+namespace OverlordVR.Unit
 {
-    event Action StartGameEvent;
-    IEnumerable<GameUnit> GameUnits { get; }
-    bool HasGameStarted { get; }
+    public interface IGame
+    {
+        event Action StartGameEvent;
+        IEnumerable<GameUnit> GameUnits { get; }
+        bool HasGameStarted { get; }
 
-    void StartGame();
+        void StartGame();
+    }
 }

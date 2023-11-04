@@ -1,4 +1,7 @@
-public interface IAction
+namespace OverlordVR.Unit
 {
-    void Cancel();
+    public interface IAction
+    {
+        void Cancel();
+    }
 }
