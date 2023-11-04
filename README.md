@@ -1,1 +1,1 @@
-# Sand
+OverlordVR is an immersive virtual reality game that invites you to step into the shoes of a powerful and malevolent deity. In this VR god game, you will embody a evil spirit who is revered by a tribe with duty to rule the world. 
