@@ -22,24 +22,24 @@ namespace Playground.Player.Interaction
 
         private bool initialized;
         private RaycastInteractor raycastInteractor;
+        private InputAction currentHandInteraction;
 
-        private void Start()
+        private void Awake()
         {
             // Subscribe to interaction input events based on hand side.
             if (handSide == HandSide.Right)
             {
                 InputProvider.MainInputActions.RightHandInteraction.Interact.performed += OnInteractionPerformed;
                 InputProvider.MainInputActions.RightHandInteraction.Interact.canceled += OnInteractionCanceled;
+                currentHandInteraction = InputProvider.MainInputActions.RightHandInteraction.InteractValue;
             }
             else
             {
                 InputProvider.MainInputActions.LeftHandInteraction.Interact.performed += OnInteractionPerformed;
                 InputProvider.MainInputActions.LeftHandInteraction.Interact.canceled += OnInteractionCanceled;
+                currentHandInteraction = InputProvider.MainInputActions.LeftHandInteraction.InteractValue;
             }
-        }
 
-        private void Awake()
-        {
             // Initialize raycast interactor
             raycastInteractor = new RaycastInteractor(raycastInteractPoint, raycastLayerMask, maxRaycastDistance, true);
 
@@ -54,7 +54,7 @@ namespace Playground.Player.Interaction
             }
 
             // Get interaction amount from input.
-            float interactionAmount = InputProvider.MainInputActions.LeftHandInteraction.InteractValue.ReadValue<float>();
+            float interactionAmount = currentHandInteraction.ReadValue<float>();
 
             raycastInteractor.UpdateRaycastInteractor(interactionAmount);
         }
