@@ -615,6 +615,15 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PrimaryButton"",
+                    ""type"": ""Button"",
+                    ""id"": ""df976970-76eb-4b4d-8ded-6bb39cf8e2d2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -780,6 +789,17 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""processors"": ""ScaleVector2(x=0),StickDeadzone"",
                     ""groups"": ""Generic XR Controller"",
                     ""action"": ""Scale Delta"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a0e2d6e4-025d-4c22-b38a-5acf983730fd"",
+                    ""path"": ""<XRController>{RightHand}/{PrimaryButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PrimaryButton"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1411,6 +1431,15 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PrimaryButton"",
+                    ""type"": ""Button"",
+                    ""id"": ""4f7e0b77-afd3-4990-9170-536c959d3459"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -1576,6 +1605,17 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
                     ""processors"": ""ScaleVector2(x=0),StickDeadzone"",
                     ""groups"": ""Generic XR Controller"",
                     ""action"": ""Scale Delta"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e984cebf-5cb0-45a0-9655-fad7f1751dad"",
+                    ""path"": ""<XRController>{LeftHand}/{PrimaryButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PrimaryButton"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -2444,6 +2484,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
         m_RightHandInteraction_TranslateAnchor = m_RightHandInteraction.FindAction("Translate Anchor", throwIfNotFound: true);
         m_RightHandInteraction_ScaleToggle = m_RightHandInteraction.FindAction("Scale Toggle", throwIfNotFound: true);
         m_RightHandInteraction_ScaleDelta = m_RightHandInteraction.FindAction("Scale Delta", throwIfNotFound: true);
+        m_RightHandInteraction_PrimaryButton = m_RightHandInteraction.FindAction("PrimaryButton", throwIfNotFound: true);
         // RightHand
         m_RightHand = asset.FindActionMap("RightHand", throwIfNotFound: true);
         m_RightHand_Position = m_RightHand.FindAction("Position", throwIfNotFound: true);
@@ -2482,6 +2523,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
         m_LeftHandInteraction_TranslateAnchor = m_LeftHandInteraction.FindAction("Translate Anchor", throwIfNotFound: true);
         m_LeftHandInteraction_ScaleToggle = m_LeftHandInteraction.FindAction("Scale Toggle", throwIfNotFound: true);
         m_LeftHandInteraction_ScaleDelta = m_LeftHandInteraction.FindAction("Scale Delta", throwIfNotFound: true);
+        m_LeftHandInteraction_PrimaryButton = m_LeftHandInteraction.FindAction("PrimaryButton", throwIfNotFound: true);
         // LeftHand
         m_LeftHand = asset.FindActionMap("LeftHand", throwIfNotFound: true);
         m_LeftHand_Position = m_LeftHand.FindAction("Position", throwIfNotFound: true);
@@ -2783,6 +2825,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_RightHandInteraction_TranslateAnchor;
     private readonly InputAction m_RightHandInteraction_ScaleToggle;
     private readonly InputAction m_RightHandInteraction_ScaleDelta;
+    private readonly InputAction m_RightHandInteraction_PrimaryButton;
     public struct RightHandInteractionActions
     {
         private @MainInputActions m_Wrapper;
@@ -2798,6 +2841,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
         public InputAction @TranslateAnchor => m_Wrapper.m_RightHandInteraction_TranslateAnchor;
         public InputAction @ScaleToggle => m_Wrapper.m_RightHandInteraction_ScaleToggle;
         public InputAction @ScaleDelta => m_Wrapper.m_RightHandInteraction_ScaleDelta;
+        public InputAction @PrimaryButton => m_Wrapper.m_RightHandInteraction_PrimaryButton;
         public InputActionMap Get() { return m_Wrapper.m_RightHandInteraction; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -2840,6 +2884,9 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
             @ScaleDelta.started += instance.OnScaleDelta;
             @ScaleDelta.performed += instance.OnScaleDelta;
             @ScaleDelta.canceled += instance.OnScaleDelta;
+            @PrimaryButton.started += instance.OnPrimaryButton;
+            @PrimaryButton.performed += instance.OnPrimaryButton;
+            @PrimaryButton.canceled += instance.OnPrimaryButton;
         }
 
         private void UnregisterCallbacks(IRightHandInteractionActions instance)
@@ -2877,6 +2924,9 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
             @ScaleDelta.started -= instance.OnScaleDelta;
             @ScaleDelta.performed -= instance.OnScaleDelta;
             @ScaleDelta.canceled -= instance.OnScaleDelta;
+            @PrimaryButton.started -= instance.OnPrimaryButton;
+            @PrimaryButton.performed -= instance.OnPrimaryButton;
+            @PrimaryButton.canceled -= instance.OnPrimaryButton;
         }
 
         public void RemoveCallbacks(IRightHandInteractionActions instance)
@@ -3153,6 +3203,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_LeftHandInteraction_TranslateAnchor;
     private readonly InputAction m_LeftHandInteraction_ScaleToggle;
     private readonly InputAction m_LeftHandInteraction_ScaleDelta;
+    private readonly InputAction m_LeftHandInteraction_PrimaryButton;
     public struct LeftHandInteractionActions
     {
         private @MainInputActions m_Wrapper;
@@ -3168,6 +3219,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
         public InputAction @TranslateAnchor => m_Wrapper.m_LeftHandInteraction_TranslateAnchor;
         public InputAction @ScaleToggle => m_Wrapper.m_LeftHandInteraction_ScaleToggle;
         public InputAction @ScaleDelta => m_Wrapper.m_LeftHandInteraction_ScaleDelta;
+        public InputAction @PrimaryButton => m_Wrapper.m_LeftHandInteraction_PrimaryButton;
         public InputActionMap Get() { return m_Wrapper.m_LeftHandInteraction; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -3210,6 +3262,9 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
             @ScaleDelta.started += instance.OnScaleDelta;
             @ScaleDelta.performed += instance.OnScaleDelta;
             @ScaleDelta.canceled += instance.OnScaleDelta;
+            @PrimaryButton.started += instance.OnPrimaryButton;
+            @PrimaryButton.performed += instance.OnPrimaryButton;
+            @PrimaryButton.canceled += instance.OnPrimaryButton;
         }
 
         private void UnregisterCallbacks(ILeftHandInteractionActions instance)
@@ -3247,6 +3302,9 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
             @ScaleDelta.started -= instance.OnScaleDelta;
             @ScaleDelta.performed -= instance.OnScaleDelta;
             @ScaleDelta.canceled -= instance.OnScaleDelta;
+            @PrimaryButton.started -= instance.OnPrimaryButton;
+            @PrimaryButton.performed -= instance.OnPrimaryButton;
+            @PrimaryButton.canceled -= instance.OnPrimaryButton;
         }
 
         public void RemoveCallbacks(ILeftHandInteractionActions instance)
@@ -3552,6 +3610,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
         void OnTranslateAnchor(InputAction.CallbackContext context);
         void OnScaleToggle(InputAction.CallbackContext context);
         void OnScaleDelta(InputAction.CallbackContext context);
+        void OnPrimaryButton(InputAction.CallbackContext context);
     }
     public interface IRightHandActions
     {
@@ -3593,6 +3652,7 @@ public partial class @MainInputActions: IInputActionCollection2, IDisposable
         void OnTranslateAnchor(InputAction.CallbackContext context);
         void OnScaleToggle(InputAction.CallbackContext context);
         void OnScaleDelta(InputAction.CallbackContext context);
+        void OnPrimaryButton(InputAction.CallbackContext context);
     }
     public interface ILeftHandActions
     {
