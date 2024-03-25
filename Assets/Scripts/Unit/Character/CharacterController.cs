@@ -8,6 +8,9 @@ namespace OverlordVR.Unit
 {
     public class CharacterController : MonoBehaviour
     {
+        [SerializeField] private GameCharacter gameCharacter;
+        [SerializeField] private Pouch pouch;
+
         private List<IUsable> usables = new();
 
         private void Awake()
@@ -19,6 +22,23 @@ namespace OverlordVR.Unit
         private void OnRightPrimaryButtonPerformed(InputAction.CallbackContext context)
         {
             Debug.Log($"[CharacterController] OnRightPrimaryButtonPerformed");
+
+            float closestDistanceSquared = float.MaxValue;
+            IUsable closestIUsable = null;
+            foreach (IUsable usable in usables)
+            {
+                float distanceSquared = (closestIUsable.GetUsableTransform.position - transform.position).sqrMagnitude;
+                if (distanceSquared < closestDistanceSquared)
+                {
+                    closestIUsable = usable;
+                    closestDistanceSquared = distanceSquared;
+                }
+            }
+
+            if (closestIUsable != null)
+            {
+                closestIUsable.TryActive(pouch);
+            }
         }
 
         private void OnRightPrimaryButtonCanceled(InputAction.CallbackContext context)

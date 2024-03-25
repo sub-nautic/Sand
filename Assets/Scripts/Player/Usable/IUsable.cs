@@ -1,10 +1,14 @@
+using OverlordVR.Unit;
+using UnityEngine;
+
 namespace OverlordVR.Player.Usable
 {
     public interface IUsable
     {
-        int NeededCoins { get; set; }
+        int GetNeededCoins { get; }
+        Transform GetUsableTransform { get; }
 
-        void TryActive();
+        void TryActive(Pouch pouch);
         void Active();
         void Cancel();
     }
