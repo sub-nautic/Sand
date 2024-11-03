@@ -71,10 +71,10 @@ namespace OverlordVR.Player.Movement
 
         private void Awake()
         {
-            InputProvider.MainInputActions.RightHandLocomotion.Turn.performed += OnTurnPerformed;
-            InputProvider.MainInputActions.RightHandLocomotion.Turn.canceled += OnTurnCancelled;
+            InputProvider.MainInputActions.XRIRightLocomotion.Turn.performed += OnTurnPerformed;
+            InputProvider.MainInputActions.XRIRightLocomotion.Turn.canceled += OnTurnCancelled;
 
-            startPosition = transform.position;
+            startPosition = playerXRRig.transform.position;
 
             isInitialized = true;
         }
@@ -111,7 +111,7 @@ namespace OverlordVR.Player.Movement
         private void UpdatePlayerMovement()
         {
             // Read input form controller
-            Vector3 inputDirection = InputProvider.MainInputActions.LeftHandLocomotion.Move.ReadValue<Vector2>();
+            Vector3 inputDirection = InputProvider.MainInputActions.XRILeftLocomotion.Move.ReadValue<Vector2>();
 
             // Calculate the amount of translation based on input and speed
             float movementAmount = inputDirection.magnitude * controllerMovementSpeed * Time.deltaTime;
@@ -181,7 +181,7 @@ namespace OverlordVR.Player.Movement
             }
 
             // Translate whole rig
-            transform.position += deltaVector;
+            playerXRRig.transform.position += deltaVector;
         }
 
         private void UpdatePlayerGrounded()
@@ -229,7 +229,7 @@ namespace OverlordVR.Player.Movement
                 // If the player falls below a certain Y position and is still falling, teleport them to the starting point
                 if (rigPosition.y < resetPositionYThreshold)
                 {
-                    transform.position = startPosition;
+                    playerXRRig.transform.position = startPosition;
                     return;
                 }
             }
@@ -238,7 +238,7 @@ namespace OverlordVR.Player.Movement
                 currentYVelocity = Vector3.zero;
             }
 
-            transform.position = rigPosition;
+            playerXRRig.transform.position = rigPosition;
         }
 
         private void Update()
@@ -253,8 +253,8 @@ namespace OverlordVR.Player.Movement
 
         private void OnDestroy()
         {
-            InputProvider.MainInputActions.RightHandLocomotion.Turn.performed -= OnTurnPerformed;
-            InputProvider.MainInputActions.RightHandLocomotion.Turn.canceled -= OnTurnCancelled;
+            InputProvider.MainInputActions.XRIRightLocomotion.Turn.performed -= OnTurnPerformed;
+            InputProvider.MainInputActions.XRIRightLocomotion.Turn.canceled -= OnTurnCancelled;
         }
     }
 }

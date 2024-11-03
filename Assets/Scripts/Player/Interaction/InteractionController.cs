@@ -29,15 +29,15 @@ namespace OverlordVR.Player.Interaction
             // Subscribe to interaction input events based on hand side.
             if (handSide == HandSide.Right)
             {
-                InputProvider.MainInputActions.RightHandInteraction.Interact.performed += OnInteractionPerformed;
-                InputProvider.MainInputActions.RightHandInteraction.Interact.canceled += OnInteractionCanceled;
-                currentHandInteraction = InputProvider.MainInputActions.RightHandInteraction.InteractValue;
+                InputProvider.MainInputActions.XRIRightInteraction.Activate.performed += OnInteractionPerformed;
+                InputProvider.MainInputActions.XRIRightInteraction.Activate.canceled += OnInteractionCanceled;
+                currentHandInteraction = InputProvider.MainInputActions.XRIRightInteraction.ActivateValue;
             }
             else
             {
-                InputProvider.MainInputActions.LeftHandInteraction.Interact.performed += OnInteractionPerformed;
-                InputProvider.MainInputActions.LeftHandInteraction.Interact.canceled += OnInteractionCanceled;
-                currentHandInteraction = InputProvider.MainInputActions.LeftHandInteraction.InteractValue;
+                InputProvider.MainInputActions.XRILeftInteraction.Activate.performed += OnInteractionPerformed;
+                InputProvider.MainInputActions.XRILeftInteraction.Activate.canceled += OnInteractionCanceled;
+                currentHandInteraction = InputProvider.MainInputActions.XRILeftInteraction.ActivateValue;
             }
 
             // Initialize raycast interactor
@@ -75,13 +75,13 @@ namespace OverlordVR.Player.Interaction
         {
             if (handSide == HandSide.Right)
             {
-                InputProvider.MainInputActions.RightHandInteraction.Interact.performed -= OnInteractionPerformed;
-                InputProvider.MainInputActions.RightHandInteraction.Interact.canceled -= OnInteractionCanceled;
+                InputProvider.MainInputActions.XRIRightInteraction.Activate.performed -= OnInteractionPerformed;
+                InputProvider.MainInputActions.XRIRightInteraction.Activate.canceled -= OnInteractionCanceled;
             }
             else
             {
-                InputProvider.MainInputActions.LeftHandInteraction.Interact.performed -= OnInteractionPerformed;
-                InputProvider.MainInputActions.LeftHandInteraction.Interact.canceled -= OnInteractionCanceled;
+                InputProvider.MainInputActions.XRILeftInteraction.Activate.performed -= OnInteractionPerformed;
+                InputProvider.MainInputActions.XRILeftInteraction.Activate.canceled -= OnInteractionCanceled;
             }
         }
     }
